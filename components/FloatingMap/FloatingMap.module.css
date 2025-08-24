@@ -1,0 +1,30 @@
+.mapButton {
+  bottom: 2rem;
+  right: 5rem;
+  background-color: var(--color-black);
+  color: var(--color-white);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.mapButton:hover {
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.6);
+  color: var(--color-white);
+}
+
+.mapButton svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .mapButton {
+    bottom: 1.5rem;
+    right: 4.5rem;
+  }
+
+  .mapButton svg {
+    width: 20px;
+    height: 20px;
+  }
+}

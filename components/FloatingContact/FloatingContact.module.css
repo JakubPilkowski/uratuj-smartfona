@@ -1,0 +1,30 @@
+.contactButton {
+  bottom: 2rem;
+  right: 2rem;
+  background-color: var(--color-accent);
+  color: var(--color-white);
+  box-shadow: 0 4px 20px rgba(0, 188, 212, 0.4);
+}
+
+.contactButton:hover {
+  box-shadow: 0 6px 25px rgba(0, 188, 212, 0.6);
+  color: var(--color-white);
+}
+
+.contactButton svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contactButton {
+    bottom: 1.5rem;
+    right: 1.5rem;
+  }
+
+  .contactButton svg {
+    width: 20px;
+    height: 20px;
+  }
+}

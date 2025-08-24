@@ -1,0 +1,40 @@
+{
+  "name": "uratuj-smartfon",
+  "version": "1.0.0",
+  "description": "Uratuj Smartfona - Profesjonalny serwis smartfonów w Olsztynie",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "release": "semantic-release"
+  },
+  "author": "JP",
+  "license": "ISC",
+  "devDependencies": {
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/commit-analyzer": "^13.0.1",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^11.0.4",
+    "@semantic-release/release-notes-generator": "^14.0.3",
+    "@types/node": "^18.19.41",
+    "@types/react": "^18.0.25",
+    "@types/react-dom": "^18.0.8",
+    "eslint": "^8.27.0",
+    "eslint-config-next": "^13.0.3",
+    "semantic-release": "^24.2.7",
+    "typescript": "^4.8.4"
+  },
+  "dependencies": {
+    "@iconify-icon/react": "^3.0.0",
+    "@radix-ui/react-dialog": "^1.1.15",
+    "clsx": "^1.2.1",
+    "embla-carousel-auto-scroll": "^8.6.0",
+    "embla-carousel-react": "^8.6.0",
+    "framer-motion": "^11.18.2",
+    "next": "^13.0.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}

@@ -1,0 +1,78 @@
+.accessory {
+  border-radius: 24px;
+  position: relative;
+  background: linear-gradient(
+    90deg,
+    var(--colorPrimary),
+    var(--colorWhite),
+    var(--colorPrimary)
+  );
+  box-shadow: rgba(var(--colorPrimary), 0.25) 0px 50px 100px -20px,
+    rgba(var(--colorPrimary), 0.3) 0px 30px 60px -30px;
+  height: 300px;
+  width: 300px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.accessoryImageWrapperOuter {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.accessoryImageWrapperInner {
+  position: relative;
+  padding: 5% 5% 50px;
+  box-sizing: border-box;
+  height: 90%;
+}
+
+.accessoryImage {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+
+.accessoryFooter {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  border-radius: 24px;
+  padding: 12px;
+  z-index: 10;
+  background-color: var(--colorWhite);
+}
+
+.accessoryIconWrapper {
+  width: 48px;
+  height: 48px;
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--colorPrimary);
+  margin-right: 12px;
+}
+
+.accessoryIcon {
+  font-size: 30px !important;
+  color: var(--colorBlack);
+}
+
+.accessoryTextWrapper {
+  color: var(--colorBlack);
+  font-family: var(--fontPrimary);
+}
+
+.accessoryTextWrapper p {
+  margin: 0;
+}
+
+.accessoryTextName {
+  margin: 0;
+}
+
+.accessoryTextPrice {
+  font-weight: bold;
+}

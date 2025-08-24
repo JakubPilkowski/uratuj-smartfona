@@ -1,0 +1,288 @@
+.nav {
+  width: 100%;
+  display: flex;
+  position: fixed;
+  box-sizing: border-box;
+  align-items: center;
+  z-index: 150;
+  transition: background-color 200ms ease-in, border-bottom-color 200ms ease-out,
+    height 200ms;
+  background-color: transparent;
+  border-bottom-color: transparent;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  height: 70px;
+  justify-content: space-between;
+  padding: 0 5%;
+}
+
+.brandImageContainer {
+  position: relative;
+}
+
+.santa-hat {
+  width: 60px;
+  top: -11px;
+  right: -27px;
+  transition: all 0.2s ease-in;
+  position: absolute;
+}
+
+.navBackground .santa-hat {
+  width: 40px;
+  top: -6px;
+  right: -17px;
+}
+
+.navBrand {
+  display: flex;
+  background-color: transparent;
+  padding: 0;
+  border: none;
+  align-items: center;
+}
+
+.navMain {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.brandImage {
+  width: 50px;
+  height: 50px;
+}
+
+.brandBell {
+  width: 1px;
+  height: 50px;
+  background-color: var(--colorWhite);
+  margin: 0 15px;
+}
+
+.brandName {
+  color: var(--colorWhite);
+  font-family: var(--fontPrimary);
+  font-size: 24px;
+  transition: font-size 200ms ease-in;
+  margin: 0;
+}
+
+.navBackground {
+  background-color: var(--colorBlack);
+  border-bottom-color: var(--colorPrimary);
+}
+
+.navBackground .brandImage {
+  width: 50px;
+  height: 50px;
+}
+
+.navBackground h2 {
+  font-size: 20px;
+}
+
+.navBackground .navLinks button {
+  font-size: 20px;
+}
+
+.navLinks {
+  display: flex;
+  align-items: center;
+  font-family: var(--fontPrimary);
+}
+
+.navLink {
+  margin-left: 60px;
+  background-color: transparent;
+  position: relative;
+  color: var(--colorWhite);
+  font-size: 24px;
+  letter-spacing: 0.03em;
+  font-weight: bold;
+  transition: font-size 200ms ease-in;
+}
+
+.navLink::after {
+  position: absolute;
+  content: "";
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--colorPrimary);
+  transition: width 300ms ease-out;
+}
+
+.navLink:hover::after {
+  width: 100%;
+}
+
+.hamburgerIcon {
+  display: flex;
+  flex-direction: column;
+  border: none;
+  padding: 0;
+  background-color: transparent;
+}
+
+.hamburgerBell {
+  margin: 2px 0;
+  width: 35px;
+  height: 5px;
+  background-color: var(--colorWhite);
+  border-radius: 2.5px;
+}
+
+.hamburgerMenu {
+  height: 100%;
+  overflow-y: auto;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-color: var(--colorBlack);
+  border-bottom: 1px solid var(--colorPrimary);
+  z-index: 2000;
+  box-sizing: border-box;
+}
+
+.menuOpenStart {
+  opacity: 0;
+  transform: translateX(100%);
+}
+
+.menuOpening {
+  transition: opacity 200ms ease-out, transform 200ms ease-out;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.menuOpenEnd {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.menuCloseStart {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.menuClosing {
+  transition: opacity 200ms ease-out, transform 200ms ease-out;
+  opacity: 0;
+  transform: translateX(100%);
+}
+
+.menuCloseEnd {
+  opacity: 0;
+  transform: translateX(100%);
+}
+
+.hamburgerContainer {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hamburgerHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 5px 0% 20%;
+  padding: 0 5%;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.hamburgerClose {
+  background-color: transparent;
+  padding: 0;
+  border: none;
+}
+
+.hamburgerItem {
+  margin-bottom: 50px;
+  background-color: transparent;
+  position: relative;
+  color: var(--colorWhite);
+  font-size: 36px;
+  font-weight: bold;
+  width: 100%;
+}
+
+.hamburgerItem:first-child {
+  margin-top: 50px;
+}
+
+.hamburgerItem::after {
+  position: absolute;
+  content: "";
+  bottom: -6px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--colorPrimary);
+  transition: transform 500ms;
+  transform-origin: center center;
+  transform: scale(0);
+}
+
+.hamburgerItem:hover::after {
+  transform: scale(1);
+}
+
+@media (min-width: 320px) {
+  .navLinks {
+    display: none;
+  }
+  /* smartphones, iPhone, portrait 480x320 phones */
+}
+@media (min-width: 481px) {
+  .navLinks {
+    display: none;
+  }
+  /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+}
+@media (min-width: 641px) {
+  /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+  .navLinks {
+    display: none;
+  }
+}
+@media (min-width: 961px) {
+  .hamburgerMenu,
+  .hamburgerIcon {
+    display: none;
+  }
+
+  .navLinks {
+    display: flex;
+  }
+  /* tablet, landscape iPad, lo-res laptops ands desktops */
+}
+@media (min-width: 1025px) {
+  .hamburgerMenu,
+  .hamburgerIcon {
+    display: none;
+  }
+
+  .navLinks {
+    display: flex;
+  }
+  /* big landscape tablets, laptops, and desktops */
+}
+@media (min-width: 1281px) {
+  /* hi-res laptops and desktops */
+  .hamburgerMenu,
+  .hamburgerIcon {
+    display: none;
+  }
+
+  .navLinks {
+    display: flex;
+  }
+}

@@ -1,0 +1,150 @@
+.instagram {
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  padding-top: 80px; /* Header height */
+  background-color: var(--color-white);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.title {
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--color-black);
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  opacity: 0.7;
+  max-width: 600px;
+  margin: 0 auto;
+  color: var(--color-black);
+}
+
+.carouselContainer {
+  margin-bottom: 3rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+.embla {
+  overflow: hidden;
+  width: 100%;
+}
+
+.emblaContainer {
+  display: flex;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.emblaSlide {
+  flex: 0 0 300px;
+  min-width: 0;
+}
+
+.post {
+  background-color: var(--color-white);
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.post:hover {
+  transform: translateY(-5px);
+}
+
+.postImage {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+}
+
+.postImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.post:hover .postImage img {
+  transform: scale(1.05);
+}
+
+.postContent {
+  padding: 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.postCaption {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+  color: var(--color-black);
+  flex: 1;
+}
+
+.postStats {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.8rem;
+  color: var(--color-gray-text);
+}
+
+.likes,
+.comments {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.followUs {
+  text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .instagram {
+    min-height: 100vh;
+    padding: 3rem 0;
+  }
+
+  .carouselContainer {
+    margin-bottom: 3rem;
+    padding: 0;
+    width: 100%;
+  }
+
+  .embla {
+    width: 100%;
+  }
+
+  .emblaContainer {
+    gap: 1rem;
+  }
+
+  .emblaSlide {
+    flex: 0 0 250px;
+    min-width: 250px;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+}

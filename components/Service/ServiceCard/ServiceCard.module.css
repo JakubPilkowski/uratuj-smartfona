@@ -1,0 +1,66 @@
+.ServiceCard {
+  border-radius: 28px;
+  background-color: var(--colorPrimary);
+  box-shadow: rgba(var(--colorPrimaryRGB), 0.25) 0px 4px 20px;
+  width: 300px;
+  justify-self: center;
+  align-self: start;
+}
+
+.ServiceCardImage {
+  object-fit: cover;
+  transition: transform 0.5s ease-in-out;
+  position: relative;
+}
+
+.ServiceCardImage:hover {
+  transform: scale(1.1);
+}
+
+.ServiceCardImageInner {
+  height: 280px;
+  clip-path: path(
+    "M 0 0 L 0 280 L 55 280 A 25 25 0 0 0 75 255 A 25 25 0 0 1 95 235 L 205 235 A 25 25 0 0 1 225 255 A 25 25 0 0 0 245 280 L 300 280 L 300 0 L 200 0 A 25 25 0 0 0 180 20 A 25 25 0 0 1 160 40 L 140 40 A 25 25 0 0 1 120 20 A 25 25 0 0 0 100 0 Z"
+  );
+}
+
+.ServiceCardImageOuter {
+  position: relative;
+  height: 280px;
+  overflow: hidden;
+  border-radius: 28px 28px 0 0;
+}
+
+.ServiceCardTitle {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  padding: 6px 48px;
+  max-height: 40px;
+}
+
+.ServiceCardImageIcon {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+}
+
+.ServiceCardPrice {
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--colorPrimary);
+  text-align: center;
+}
+
+.ServiceCardDescription {
+  padding: 12px;
+}
