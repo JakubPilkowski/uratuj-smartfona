@@ -26,9 +26,21 @@ jobs:
         with:
           node-version: "18"
 
+      - name: Debug branch info
+        run: |
+          echo "Current branch: ${{ github.ref_name }}"
+          echo "Git branch: $(git branch --show-current)"
+          echo "All branches:"
+          git branch -a
+
       - name: Install semantic-release dependencies
         run: |
           npm install -g semantic-release @semantic-release/commit-analyzer @semantic-release/release-notes-generator @semantic-release/changelog @semantic-release/git @semantic-release/github
+
+      - name: Debug semantic-release config
+        run: |
+          echo "Semantic-release config:"
+          npx semantic-release --dry-run --debug
 
       - name: Release
         env:

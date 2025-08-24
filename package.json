@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Uratuj Smartfona - Profesjonalny serwis smartfonów w Olsztynie",
   "main": "index.js",
+  "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
