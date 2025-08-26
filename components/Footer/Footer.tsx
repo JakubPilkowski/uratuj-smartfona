@@ -20,10 +20,10 @@ const Footer: React.FC = () => {
               <div className={styles.contactItem}>
                 <h3 className={styles.contactTitle}>Uratuj Smartfona</h3>
                 <a
-                  href="mailto:centrumtelefoniiolsztyn@gmail.com"
+                  href="mailto:uratujswojegosmartfona@gmail.com"
                   className={styles.contactLink}
                 >
-                  centrumtelefoniiolsztyn@gmail.com
+                  uratujswojegosmartfona@gmail.com
                 </a>
               </div>
 
