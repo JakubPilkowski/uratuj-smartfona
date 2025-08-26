@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/JakubPilkowski/uratuj-smartfona/compare/v1.0.0...v1.0.1) (2025-08-26)
+
+
+### Bug Fixes
+
+* invalid email address ([83ec206](https://github.com/JakubPilkowski/uratuj-smartfona/commit/83ec206c1b6541170d2a94c77d0d30ae382bfe1a))
+
 # 1.0.0 (2025-08-24)
 
 
