@@ -9,6 +9,8 @@ import Accessories from "../components/Accessories/Accessories";
 import Footer from "../components/Footer/Footer";
 import FloatingContact from "../components/FloatingContact/FloatingContact";
 import FloatingMap from "../components/FloatingMap/FloatingMap";
+import FloatingWhatsApp from "../components/FloatingWhatsApp/FloatingWhatsApp";
+import FloatingInstagram from "../components/FloatingInstagram/FloatingInstagram";
 import PromotionDialog from "../components/PromotionDialog/PromotionDialog";
 
 const HomePage: React.FC = () => {
@@ -31,6 +33,8 @@ const HomePage: React.FC = () => {
 
       <FloatingMap />
       <FloatingContact />
+      <FloatingWhatsApp />
+      <FloatingInstagram />
       <PromotionDialog />
     </>
   );

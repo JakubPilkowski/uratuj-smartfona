@@ -1,0 +1,35 @@
+<svg width="330" height="330" viewBox="0 0 330 330" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Black circle background with subtle border -->
+  <circle cx="165" cy="165" r="165" fill="hsl(0, 0%, 8%)" stroke="#333333" stroke-width="1"/>
+  
+  <!-- Smartphone body - equal border thickness -->
+  <rect x="105" y="57" width="120" height="216" rx="18" fill="hsl(0, 0%, 100%)" stroke="hsl(0, 0%, 100%)" stroke-width="4"/>
+  
+  <!-- Phone screen area - exactly equal borders all around (5px each) -->
+  <rect x="112" y="64" width="106" height="202" rx="12" fill="hsl(0, 0%, 8%)"/>
+  
+  <!-- Screen with black/white effect -->
+  <rect x="119" y="71" width="92" height="188" rx="7" fill="hsl(0, 0%, 100%)"/>
+  
+  <!-- Screen shadow area (black) - full display coverage -->
+  <rect x="119" y="71" width="92" height="188" rx="7" fill="hsl(0, 0%, 8%)" opacity="0.3"/>
+  
+  <!-- Screen highlight area (white) - full display coverage -->
+  <rect x="119" y="71" width="92" height="188" rx="7" fill="hsl(0, 0%, 100%)" opacity="0.8"/>
+  
+  <!-- White parallelogram with 20% wider bases -->
+  <path d="M 211 103 L 211 163 L 119 225 L 119 163 Z" fill="hsl(0, 0%, 100%)"/>
+  
+  <!-- iPhone-style notch at the top -->
+  <rect x="154" y="59" width="24" height="7" rx="4" fill="hsl(0, 0%, 100%)"/>
+  
+  <!-- Bottom bell (home indicator) - same height as notch, twice as wide, in primary color -->
+  <rect x="142" y="240" width="48" height="7" rx="4" fill="#00BCD4"/>
+  
+  <!-- Volume buttons on left side - moved higher -->
+  <rect x="100" y="97" width="5" height="15" rx="3" fill="hsl(0, 0%, 100%)"/>
+  <rect x="100" y="122" width="5" height="15" rx="3" fill="hsl(0, 0%, 100%)"/>
+  
+  <!-- Power button on right side - moved higher -->
+  <rect x="225" y="106" width="5" height="24" rx="3" fill="hsl(0, 0%, 100%)"/>
+</svg>

@@ -28,10 +28,10 @@ const Header: React.FC = () => {
         {/* Logo */}
         <div className={styles.logo} onClick={scrollToTop}>
           <Image
-            src="/uratuj_smartfona.png"
+            src="/phone-with-text-horizontal.svg"
             alt="Uratuj Smartfona"
-            width={200}
-            height={60}
+            width={233}
+            height={100}
             style={{ objectFit: "contain" }}
           />
         </div>
@@ -97,10 +97,10 @@ const Header: React.FC = () => {
           <div className={styles.mobileNavContent}>
             <div className={styles.mobileLogo} onClick={scrollToTop}>
               <Image
-                src="/uratuj_smartfona.png"
+                src="/phone-with-text-horizontal.svg"
                 alt="Uratuj Smartfona"
-                width={250}
-                height={75}
+                width={400}
+                height={171}
                 style={{ objectFit: "contain" }}
               />
             </div>

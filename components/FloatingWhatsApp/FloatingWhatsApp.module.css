@@ -1,0 +1,30 @@
+.whatsappButton {
+  bottom: 10rem;
+  right: 2rem;
+  background-color: #25d366;
+  color: var(--color-white);
+  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+}
+
+.whatsappButton:hover {
+  box-shadow: 0 6px 25px rgba(37, 211, 102, 0.6);
+  color: var(--color-white);
+}
+
+.whatsappButton svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .whatsappButton {
+    bottom: 9.5rem;
+    right: 1.5rem;
+  }
+
+  .whatsappButton svg {
+    width: 20px;
+    height: 20px;
+  }
+}
