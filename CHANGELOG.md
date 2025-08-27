@@ -1,3 +1,17 @@
+# [1.2.0](https://github.com/JakubPilkowski/uratuj-smartfona/compare/v1.1.0...v1.2.0) (2025-08-27)
+
+
+### Bug Fixes
+
+* @img/sharp-wasm32 import ([16f7456](https://github.com/JakubPilkowski/uratuj-smartfona/commit/16f7456072e1757d64895557f9bd3c1ac05912c4))
+* rollback netlify build script ([b598965](https://github.com/JakubPilkowski/uratuj-smartfona/commit/b598965882197b90597bdb19b8abb7c4c822e246))
+
+
+### Features
+
+* add img/sharp-wasm32 as optional dependency ([e9cc42b](https://github.com/JakubPilkowski/uratuj-smartfona/commit/e9cc42ba2b9dddc09189d57c0c5b8787f717487b))
+* implement custom netlify build script ([b69097f](https://github.com/JakubPilkowski/uratuj-smartfona/commit/b69097ffb67a931cd43418c946712a99abe9184d))
+
 # [1.1.0](https://github.com/JakubPilkowski/uratuj-smartfona/compare/v1.0.1...v1.1.0) (2025-08-27)
 
 ### Features
