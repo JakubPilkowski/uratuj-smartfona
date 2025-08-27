@@ -70,21 +70,8 @@ const Hero: React.FC = () => {
             </div>
           </motion.div>
 
-          {/* Right side - Loader */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
-            className={styles.rightSide}
-          >
-            <div className={styles.loaderContainer}>
-              <img
-                src="/loader.svg"
-                alt="Loading..."
-                className={styles.loader}
-              />
-            </div>
-          </motion.div>
+          {/* Right side - Empty space for proper layout */}
+          <div className={styles.rightSide}></div>
         </div>
       </div>
 
