@@ -1,0 +1,9 @@
+<svg width="690" height="85" viewBox="0 0 690 85" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Text "URATUJ SMARTFONA" in one line with improved typography -->
+  <!-- URA+UJ with plus icon instead of T -->
+  <text x="20" y="65" font-family="Poppins, sans-serif" font-size="60" font-weight="600" text-anchor="start" fill="hsl(0, 0%, 100%)">URA</text>
+  <!-- Plus icon in primary color - same height as font size -->
+  <rect x="150" y="40" width="44" height="10" rx="2" fill="#00BCD4"/>
+  <rect x="167" y="22" width="10" height="44" rx="2" fill="#00BCD4"/>
+  <text x="195" y="65" font-family="Poppins, sans-serif" font-size="60" font-weight="600" text-anchor="start" fill="hsl(0, 0%, 100%)">UJ SMARTFONA</text>
+</svg>
