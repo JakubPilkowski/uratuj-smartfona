@@ -5,7 +5,7 @@ import styles from "./Accessory.module.css";
 interface AccessoryProps {
   title: string;
   price: string;
-  image: string;
+  image: any; // StaticImageData type
   imageAlt: string;
   className?: string;
 }

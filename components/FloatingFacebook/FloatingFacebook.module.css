@@ -1,0 +1,36 @@
+.facebookButton {
+  bottom: 18rem;
+  right: 2rem;
+  background-color: #1877f2;
+  color: white;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(24, 119, 242, 0.4);
+}
+
+.facebookButton:hover {
+  background-color: #166fe5;
+  box-shadow: 0 6px 25px rgba(24, 119, 242, 0.6);
+  color: white;
+}
+
+.facebookButton:active {
+  transform: scale(0.95);
+}
+
+.facebookButton img {
+  width: 24px;
+  height: 24px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .facebookButton {
+    bottom: 17.5rem;
+    right: 1.5rem;
+  }
+
+  .facebookButton img {
+    width: 20px;
+    height: 20px;
+  }
+}

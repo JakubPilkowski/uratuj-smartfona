@@ -2,27 +2,30 @@ import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import styles from "./Services.module.css";
+import screenFixing from "../../public/screen_fixing.jpg";
+import cameraFixing from "../../public/camera_fixing.jpg";
+import phoneFixing from "../../public/phone_fixing.jpg";
 
 const Services: React.FC = () => {
   const services = [
     {
       title: "Wymiana",
       price: "50 zł*",
-      image: "/screen_fixing.jpg",
+      image: screenFixing,
       imageAlt: "Wymiana ekranu",
       list: ["ekranów", "modułów", "gniazd", "baterii", "aparatów"],
     },
     {
       title: "Naprawa",
       price: "30 zł*",
-      image: "/camera_fixing.jpg",
+      image: cameraFixing,
       imageAlt: "Skręcanie aparatu",
       list: ["głośników", "mikrofonów", "aparatów w telefonie"],
     },
     {
       title: "Inne",
       price: "30 zł*",
-      image: "/phone_fixing.jpg",
+      image: phoneFixing,
       imageAlt: "Instalacja układu",
       list: [
         "usługi programistyczne",
