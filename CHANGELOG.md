@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/JakubPilkowski/uratuj-smartfona/compare/v1.0.1...v1.1.0) (2025-08-27)
+
+
+### Features
+
+* implement image optimization and SVG improvements ([6ccd3a2](https://github.com/JakubPilkowski/uratuj-smartfona/commit/6ccd3a213770c63f2276bacd6a0c8a64642b53e2))
+
 ## [1.0.1](https://github.com/JakubPilkowski/uratuj-smartfona/compare/v1.0.0...v1.0.1) (2025-08-26)
 
 
