@@ -114,7 +114,7 @@ const Footer: React.FC = () => {
             <h3 className={styles.mapTitle}>Lokalizacja</h3>
             <div className={styles.map}>
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2357.5073313268567!2d20.488660815991853!3d53.78045744980634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46e27932a8723f9f%3A0x1f8d7a896ca9d506!2sCentrum%20Telefonii%20s.c.%20%C5%9Awi%C4%99cicki%20G.%2C%20Gromek-%20Pi%C5%82kowska%20H.E.!5e0!3m2!1spl!2spl!4v1600695864194!5m2!1spl!2spl"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d399.61375122111366!2d20.490568954508895!3d53.78047378612215!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46e279516b305731%3A0x1ee6d849672e4df2!2sUratuj%20Smartfona!5e0!3m2!1spl!2spl!4v1756310770749!5m2!1spl!2spl"
                 title="Mapa Google z lokalizacją serwisu na Placu Pułaskiego 7 lokal 62"
                 allowFullScreen
                 loading="lazy"

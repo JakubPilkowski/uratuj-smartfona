@@ -6,7 +6,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "npm rebuild sharp && next build",
     "start": "next start",
     "lint": "next lint",
     "release": "semantic-release"
@@ -38,8 +38,5 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "sharp": "^0.34.3"
-  },
-  "optionalDependencies": {
-    "sharp-linux-x64": "^0.34.3"
   }
 }
