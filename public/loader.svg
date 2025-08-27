@@ -1,0 +1,9 @@
+<svg width="1280" height="720" viewBox="0 0 1280 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Simple spinning circle positioned on the right side -->
+  <circle cx="960" cy="360" r="100" fill="none" stroke="#e5e7eb" stroke-width="8"/>
+  
+  <!-- Animated spinner arc positioned on the right side -->
+  <circle cx="960" cy="360" r="100" fill="none" stroke="#3b82f6" stroke-width="8" stroke-linecap="round" stroke-dasharray="314" stroke-dashoffset="314">
+    <animateTransform attributeName="transform" type="rotate" values="0 960 360;360 960 360" dur="1s" repeatCount="indefinite"/>
+  </circle>
+</svg>
