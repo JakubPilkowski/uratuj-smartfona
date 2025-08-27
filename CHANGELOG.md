@@ -1,3 +1,15 @@
+# [1.2.0](https://github.com/JakubPilkowski/uratuj-smartfona/compare/v1.1.0...v1.2.0) (2025-08-27)
+
+
+### Bug Fixes
+
+* @img/sharp-wasm32 import ([16f7456](https://github.com/JakubPilkowski/uratuj-smartfona/commit/16f7456072e1757d64895557f9bd3c1ac05912c4))
+
+
+### Features
+
+* add img/sharp-wasm32 as optional dependency ([e9cc42b](https://github.com/JakubPilkowski/uratuj-smartfona/commit/e9cc42ba2b9dddc09189d57c0c5b8787f717487b))
+
 # [1.1.0](https://github.com/JakubPilkowski/uratuj-smartfona/compare/v1.0.1...v1.1.0) (2025-08-27)
 
 
