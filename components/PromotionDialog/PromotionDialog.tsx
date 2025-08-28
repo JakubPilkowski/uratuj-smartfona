@@ -2,19 +2,24 @@ import * as Dialog from "@radix-ui/react-dialog";
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 import { Icon } from "@iconify-icon/react";
+import { useCookieConsent } from "../../contexts/CookieConsentContext";
 import styles from "./PromotionDialog.module.css";
 
 export default function PromotionDialog() {
   const [isOpen, setIsOpen] = useState(false);
+  const { cookiesAccepted } = useCookieConsent();
 
   useEffect(() => {
-    // Show dialog after 8 seconds
-    const timer = setTimeout(() => {
-      setIsOpen(true);
-    }, 8000);
+    // Only show dialog if cookies are accepted
+    if (cookiesAccepted) {
+      // Show dialog after 8 seconds
+      const timer = setTimeout(() => {
+        setIsOpen(true);
+      }, 8000);
 
-    return () => clearTimeout(timer);
-  }, []);
+      return () => clearTimeout(timer);
+    }
+  }, [cookiesAccepted]);
 
   const handleReviewClick = () => {
     // Open Google review link in new tab
@@ -63,6 +68,11 @@ export default function PromotionDialog() {
 
                   <Dialog.Description className={styles.description}>
                     Zostaw opinię w Google i otrzymaj szkło gratis!*
+                  </Dialog.Description>
+
+                  <Dialog.Description className={styles.descriptionSecondary}>
+                    Pomóż innym klientom i otrzymaj darmowe szkło ochronne do swojego smartfona. 
+                    Wystarczy, że zostawisz nam pozytywną opinię w Google!
                   </Dialog.Description>
 
                   <div className={styles.ctaContainer}>

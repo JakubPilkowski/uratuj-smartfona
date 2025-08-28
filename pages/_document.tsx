@@ -19,22 +19,6 @@ class MyDocument extends Document {
           <link rel="icon" type="image/png" href="uratuj_smartfona.ico" />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" />
-
-          {/* Google Analytics */}
-          <script
-            async
-            src="https://www.googletagmanager.com/gtag/js?id=G-6YYP4D08H6"
-          />
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
-                gtag('config', 'G-6YYP4D08H6');
-              `,
-            }}
-          />
         </Head>
         <body style={{ backgroundColor: "var(--color-black)" }}>
           <Main />
