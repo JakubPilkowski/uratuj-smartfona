@@ -5,8 +5,6 @@ interface CookieConsentContextType {
   setCookiesAccepted: (accepted: boolean) => void;
   hasUserInteracted: boolean;
   setHasUserInteracted: (interacted: boolean) => void;
-  bannerVisible: boolean;
-  setBannerVisible: (visible: boolean) => void;
 }
 
 const CookieConsentContext = createContext<CookieConsentContextType | undefined>(undefined);
@@ -26,7 +24,6 @@ interface CookieConsentProviderProps {
 export const CookieConsentProvider: React.FC<CookieConsentProviderProps> = ({ children }) => {
   const [cookiesAccepted, setCookiesAccepted] = useState<boolean>(false);
   const [hasUserInteracted, setHasUserInteracted] = useState<boolean>(false);
-  const [bannerVisible, setBannerVisible] = useState<boolean>(true);
 
   useEffect(() => {
     // Check if user has already made a choice
@@ -34,14 +31,12 @@ export const CookieConsentProvider: React.FC<CookieConsentProviderProps> = ({ ch
     if (savedConsent) {
       setCookiesAccepted(savedConsent === "true");
       setHasUserInteracted(true);
-      setBannerVisible(false);
     }
   }, []);
 
   const handleSetCookiesAccepted = (accepted: boolean) => {
     setCookiesAccepted(accepted);
     setHasUserInteracted(true);
-    setBannerVisible(false);
     localStorage.setItem("uratuj-smartfona-cookies", accepted.toString());
   };
 
@@ -50,8 +45,6 @@ export const CookieConsentProvider: React.FC<CookieConsentProviderProps> = ({ ch
     setCookiesAccepted: handleSetCookiesAccepted,
     hasUserInteracted,
     setHasUserInteracted,
-    bannerVisible,
-    setBannerVisible,
   };
 
   return (

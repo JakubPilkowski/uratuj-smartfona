@@ -5,13 +5,11 @@ import styles from "./CookieConsent.module.css";
 interface CookieConsentProps {
   onAccept: () => void;
   onDecline: () => void;
-  onCancel: () => void;
 }
 
 const CookieConsentBanner: React.FC<CookieConsentProps> = ({
   onAccept,
   onDecline,
-  onCancel,
 }) => {
   return (
     <AnimatePresence>
@@ -28,16 +26,16 @@ const CookieConsentBanner: React.FC<CookieConsentProps> = ({
             <br />
             Używamy plików cookie, aby poprawić Twoje doświadczenie na naszej
             stronie, analizować ruch i personalizować treści. Klikając
-            &quot;Akceptuję wszystkie&quot;, wyrażasz zgodę na używanie wszystkich
-            plików cookie.
+            &quot;Akceptuję wszystkie&quot;, wyrażasz zgodę na używanie
+            wszystkich plików cookie.
           </div>
-          
+
           <div className={styles.links}>
             <a href="/polityka-prywatnosci" className={styles.link}>
               Polityka prywatności
             </a>
           </div>
-          
+
           <div className={styles.buttonContainer}>
             <button
               className={styles.acceptButton}
@@ -46,21 +44,13 @@ const CookieConsentBanner: React.FC<CookieConsentProps> = ({
             >
               Akceptuję wszystkie
             </button>
-            
+
             <button
               className={styles.declineButton}
               onClick={onDecline}
               type="button"
             >
               Odrzuć
-            </button>
-            
-            <button
-              className={styles.cancelButton}
-              onClick={onCancel}
-              type="button"
-            >
-              Anuluj
             </button>
           </div>
         </div>

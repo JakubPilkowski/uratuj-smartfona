@@ -8,7 +8,7 @@ import CookieConsentBanner from "../components/CookieConsent";
 import GoogleAnalytics from "../components/GoogleAnalytics";
 
 function AppContent({ Component, pageProps }: AppProps) {
-  const { cookiesAccepted, setCookiesAccepted, bannerVisible, setBannerVisible } =
+  const { cookiesAccepted, setCookiesAccepted, hasUserInteracted } =
     useCookieConsent();
 
   const handleAccept = () => {
@@ -19,20 +19,14 @@ function AppContent({ Component, pageProps }: AppProps) {
     setCookiesAccepted(false);
   };
 
-  const handleCancel = () => {
-    // Hide the banner without saving any preference
-    setBannerVisible(false);
-  };
-
   return (
     <>
       <Component {...pageProps} />
       <GoogleAnalytics />
-      {bannerVisible && (
+      {!hasUserInteracted && (
         <CookieConsentBanner
           onAccept={handleAccept}
           onDecline={handleDecline}
-          onCancel={handleCancel}
         />
       )}
     </>
