@@ -71,8 +71,9 @@ export default function PromotionDialog() {
                   </Dialog.Description>
 
                   <Dialog.Description className={styles.descriptionSecondary}>
-                    Pomóż innym klientom i otrzymaj darmowe szkło ochronne do swojego smartfona. 
-                    Wystarczy, że zostawisz nam pozytywną opinię w Google!
+                    Pomóż innym klientom i otrzymaj darmowe szkło ochronne do
+                    swojego smartfona. Wystarczy, że zostawisz nam pozytywną
+                    opinię w Google!
                   </Dialog.Description>
 
                   <div className={styles.ctaContainer}>
