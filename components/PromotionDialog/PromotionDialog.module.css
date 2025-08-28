@@ -14,7 +14,7 @@
   background-color: var(--color-white);
   border-radius: 20px;
   padding: 0;
-  max-width: 500px;
+  max-width: 550px;
   width: 90%;
   max-height: 90vh;
   overflow: hidden;
@@ -124,6 +124,15 @@
 
 .ctaButton:active {
   transform: translateY(0);
+}
+
+.disclaimer {
+  font-family: "Inter", sans-serif;
+  font-size: 0.8rem;
+  color: var(--color-gray);
+  margin: 1rem 0 0 0;
+  line-height: 1.4;
+  text-align: center;
 }
 
 /* Responsive */

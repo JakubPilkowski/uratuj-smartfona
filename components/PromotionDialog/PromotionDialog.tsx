@@ -16,6 +16,12 @@ export default function PromotionDialog() {
     return () => clearTimeout(timer);
   }, []);
 
+  const handleReviewClick = () => {
+    // Open Google review link in new tab
+    window.open("https://g.page/r/CfJNLmdJ2OYeEBM/review", "_blank");
+    setIsOpen(false);
+  };
+
   return (
     <Dialog.Root open={isOpen} onOpenChange={setIsOpen}>
       <AnimatePresence>
@@ -52,32 +58,25 @@ export default function PromotionDialog() {
 
                 <div className={styles.body}>
                   <Dialog.Title className={styles.title}>
-                    🎉 Specjalna Promocja! 🎉
+                    🎁 Darmowe Szkło Ochronne! 🎁
                   </Dialog.Title>
 
                   <Dialog.Description className={styles.description}>
-                    -50% na wszystkie akcesoria!
-                  </Dialog.Description>
-
-                  <Dialog.Description className={styles.descriptionSecondary}>
-                    Skorzystaj z naszej wyjątkowej oferty i zaopatrz się w
-                    akcesoria do swojego smartfona w super cenach!
+                    Zostaw opinię w Google i otrzymaj szkło gratis!*
                   </Dialog.Description>
 
                   <div className={styles.ctaContainer}>
                     <button
                       className={styles.ctaButton}
-                      onClick={() => {
-                        setIsOpen(false);
-                        const element = document.getElementById("accessories");
-                        if (element) {
-                          element.scrollIntoView({ behavior: "smooth" });
-                        }
-                      }}
+                      onClick={handleReviewClick}
                     >
-                      Zobacz akcesoria
+                      Zostaw opinię i odbierz szkło gratis
                     </button>
                   </div>
+                  <p className={styles.disclaimer}>
+                    * Darmowe szkło należy odebrać bezpośrednio w serwisie
+                    ukazując dowód wystawienia opinii
+                  </p>
                 </div>
               </motion.div>
             </Dialog.Content>
