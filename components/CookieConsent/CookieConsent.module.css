@@ -5,7 +5,7 @@
   right: 0;
   background: var(--color-white);
   color: var(--color-black);
-  border-top: 1px solid var(--color-gray);
+  border-top: 1px solid var(--color-gray-medium);
   padding: 1rem;
   font-size: 14px;
   z-index: 9999;
@@ -15,35 +15,62 @@
 .content {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.75rem;
   max-width: 1200px;
   margin: 0 auto;
   width: 100%;
 }
 
 .text {
-  font-family: 'Inter', sans-serif;
-  line-height: 1.5;
+  font-family: "Inter", sans-serif;
+  line-height: 1.6;
   margin: 0;
+  font-size: 0.9rem;
 }
 
-.links {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-}
-
-.link {
+.inlineLink {
   color: var(--color-accent);
   text-decoration: none;
-  font-size: 0.9rem;
   font-weight: 500;
   transition: color 0.2s ease;
 }
 
-.link:hover {
-  color: var(--color-accent-dark);
+.inlineLink:hover {
+  color: hsl(190, 100%, 45%);
   text-decoration: underline;
+}
+
+.cookieOptions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 0.5rem 0;
+}
+
+.cookieOption {
+  display: flex;
+  align-items: center;
+}
+
+.checkboxLabel {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  font-family: "Inter", sans-serif;
+  font-size: 0.9rem;
+}
+
+.checkbox {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--color-accent);
+  cursor: pointer;
+}
+
+.checkboxText {
+  color: var(--color-black);
+  font-weight: 500;
 }
 
 .buttonContainer {
@@ -64,12 +91,13 @@
   font-weight: 600;
   cursor: pointer;
   transition: all 0.2s ease;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 .acceptButton:hover {
-  background: var(--color-accent-dark);
+  background: hsl(190, 100%, 45%);
   transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 188, 212, 0.3);
 }
 
 .acceptButton:active {
@@ -78,21 +106,22 @@
 
 .declineButton {
   background: transparent;
-  color: var(--color-gray);
-  border: 1px solid var(--color-gray);
+  color: var(--color-gray-text);
+  border: 1px solid var(--color-gray-medium);
   border-radius: 8px;
   padding: 0.75rem 1.5rem;
   font-size: 14px;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.2s ease;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 .declineButton:hover {
-  background: var(--color-gray);
+  background: var(--color-gray-medium);
   color: var(--color-white);
   transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .declineButton:active {
@@ -104,20 +133,24 @@
   .content {
     text-align: center;
   }
-  
-  .links {
-    justify-content: center;
-  }
-  
+
   .text {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
   }
-  
+
+  .cookieOptions {
+    align-items: center;
+  }
+
+  .checkboxLabel {
+    font-size: 0.85rem;
+  }
+
   .buttonContainer {
     margin-top: 0.75rem;
     gap: 0.5rem;
   }
-  
+
   .acceptButton,
   .declineButton {
     padding: 0.6rem 1.2rem;

@@ -2,10 +2,10 @@ import { useEffect } from "react";
 import { useCookieConsent } from "../../contexts/CookieConsentContext";
 
 const GoogleAnalytics: React.FC = () => {
-  const { cookiesAccepted } = useCookieConsent();
+  const { analyticsEnabled } = useCookieConsent();
 
   useEffect(() => {
-    if (cookiesAccepted && typeof window !== "undefined") {
+    if (analyticsEnabled && typeof window !== "undefined") {
       // Load Google Analytics script
       const script1 = document.createElement("script");
       script1.async = true;
@@ -24,11 +24,15 @@ const GoogleAnalytics: React.FC = () => {
 
       // Cleanup function
       return () => {
-        document.head.removeChild(script1);
-        document.head.removeChild(script2);
+        if (document.head.contains(script1)) {
+          document.head.removeChild(script1);
+        }
+        if (document.head.contains(script2)) {
+          document.head.removeChild(script2);
+        }
       };
     }
-  }, [cookiesAccepted]);
+  }, [analyticsEnabled]);
 
   return null; // This component doesn't render anything
 };

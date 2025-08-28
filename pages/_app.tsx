@@ -5,24 +5,27 @@ import {
   useCookieConsent,
 } from "../contexts/CookieConsentContext";
 import CookieConsentBanner from "../components/CookieConsent";
+import CookieConsentOverlay from "../components/CookieConsent/CookieConsentOverlay";
 import GoogleAnalytics from "../components/GoogleAnalytics";
 
 function AppContent({ Component, pageProps }: AppProps) {
-  const { cookiesAccepted, setCookiesAccepted, hasUserInteracted } =
+  const { setCookiesAccepted, hasUserInteracted, showOverlay } =
     useCookieConsent();
 
-  const handleAccept = () => {
-    setCookiesAccepted(true);
+  const handleAccept = (analytics: boolean) => {
+    setCookiesAccepted(true, analytics);
   };
 
   const handleDecline = () => {
-    setCookiesAccepted(false);
+    setCookiesAccepted(false, false);
   };
 
   return (
     <>
-      <Component {...pageProps} />
-      <GoogleAnalytics />
+      <CookieConsentOverlay show={showOverlay}>
+        <Component {...pageProps} />
+        <GoogleAnalytics />
+      </CookieConsentOverlay>
       {!hasUserInteracted && (
         <CookieConsentBanner
           onAccept={handleAccept}

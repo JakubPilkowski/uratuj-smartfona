@@ -7,19 +7,23 @@ import styles from "./PromotionDialog.module.css";
 
 export default function PromotionDialog() {
   const [isOpen, setIsOpen] = useState(false);
-  const { cookiesAccepted } = useCookieConsent();
+  const { hasUserInteracted, timeToAccept } = useCookieConsent();
 
   useEffect(() => {
-    // Only show dialog if cookies are accepted
-    if (cookiesAccepted) {
-      // Show dialog after 8 seconds
+    // Only show dialog if user has interacted with cookie consent
+    if (hasUserInteracted) {
+      // Calculate delay based on time to accept cookies
+      // If timeToAccept is 0, assume 8 seconds
+      const delay = Math.max(2000, 8000 - timeToAccept * 1000);
+
+      // Show dialog after calculated delay
       const timer = setTimeout(() => {
         setIsOpen(true);
-      }, 8000);
+      }, delay);
 
       return () => clearTimeout(timer);
     }
-  }, [cookiesAccepted]);
+  }, [hasUserInteracted, timeToAccept]);
 
   const handleReviewClick = () => {
     // Open Google review link in new tab
