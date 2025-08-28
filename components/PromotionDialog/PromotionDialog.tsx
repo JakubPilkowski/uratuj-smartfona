@@ -3,11 +3,15 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 import { Icon } from "@iconify-icon/react";
 import { useCookieConsent } from "../../contexts/CookieConsentContext";
+import { useGoogleAnalytics } from "../../hooks/useGoogleAnalytics";
 import styles from "./PromotionDialog.module.css";
 
 export default function PromotionDialog() {
   const [isOpen, setIsOpen] = useState(false);
-  const { hasUserInteracted, timeToAccept } = useCookieConsent();
+  const { hasUserInteracted, analyticsEnabled, timeToAccept } =
+    useCookieConsent();
+  const { trackPromotionDialogDisplayed, trackPromotionDialogAction } =
+    useGoogleAnalytics();
 
   useEffect(() => {
     // Only show dialog if user has interacted with cookie consent
@@ -19,15 +23,33 @@ export default function PromotionDialog() {
       // Show dialog after calculated delay
       const timer = setTimeout(() => {
         setIsOpen(true);
+
+        // Track promotion dialog display in Google Analytics
+        trackPromotionDialogDisplayed(timeToAccept);
       }, delay);
 
       return () => clearTimeout(timer);
     }
-  }, [hasUserInteracted, timeToAccept]);
+  }, [
+    analyticsEnabled,
+    hasUserInteracted,
+    timeToAccept,
+    trackPromotionDialogDisplayed,
+  ]);
 
   const handleReviewClick = () => {
+    // Track review button click in Google Analytics
+    trackPromotionDialogAction("google_review_clicked");
+
     // Open Google review link in new tab
     window.open("https://g.page/r/CfJNLmdJ2OYeEBM/review", "_blank");
+    setIsOpen(false);
+  };
+
+  const handleClose = () => {
+    // Track dialog close in Google Analytics
+    trackPromotionDialogAction("dialog_closed");
+
     setIsOpen(false);
   };
 
@@ -57,7 +79,7 @@ export default function PromotionDialog() {
                   <Dialog.Close asChild>
                     <button
                       className={styles.closeButton}
-                      onClick={() => setIsOpen(false)}
+                      onClick={handleClose}
                       aria-label="Zamknij"
                     >
                       <Icon icon="mdi:close" className={styles.icon} />

@@ -5,7 +5,12 @@ const GoogleAnalytics: React.FC = () => {
   const { analyticsEnabled } = useCookieConsent();
 
   useEffect(() => {
-    if (analyticsEnabled && typeof window !== "undefined") {
+    // Only load Google Analytics in production and when cookies are accepted
+    if (
+      analyticsEnabled &&
+      typeof window !== "undefined" &&
+      process.env.NODE_ENV === "production"
+    ) {
       // Load Google Analytics script
       const script1 = document.createElement("script");
       script1.async = true;
