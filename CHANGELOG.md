@@ -1,3 +1,26 @@
+# [1.2.0](https://github.com/JakubPilkowski/uratuj-smartfona/compare/v1.1.0...v1.2.0) (2025-09-01)
+
+
+### Bug Fixes
+
+* @img/sharp-wasm32 import ([16f7456](https://github.com/JakubPilkowski/uratuj-smartfona/commit/16f7456072e1757d64895557f9bd3c1ac05912c4))
+* fix hero section right side ([aa135b2](https://github.com/JakubPilkowski/uratuj-smartfona/commit/aa135b2445b8e5011e2278a12abc8457c96f1253))
+* remove netlify build script ([5cf3694](https://github.com/JakubPilkowski/uratuj-smartfona/commit/5cf36940b24b769b1220303bba9ef03de449ee11))
+* rollback netlify build script ([b598965](https://github.com/JakubPilkowski/uratuj-smartfona/commit/b598965882197b90597bdb19b8abb7c4c822e246))
+
+
+### Features
+
+* add custom SVG loader positioned on right side for video poster ([0cc2ff1](https://github.com/JakubPilkowski/uratuj-smartfona/commit/0cc2ff1d4e9ab470a947bb5a825490b36be1272d))
+* add Google Analytics tracking with GA4 ID G-6YYP4D08H6 ([61c6c87](https://github.com/JakubPilkowski/uratuj-smartfona/commit/61c6c8739854d8b558324ebbd5d5d1d972c4fc52))
+* add img/sharp-wasm32 as optional dependency ([e9cc42b](https://github.com/JakubPilkowski/uratuj-smartfona/commit/e9cc42ba2b9dddc09189d57c0c5b8787f717487b))
+* implement cookie consent overlay with timing system ([a273a34](https://github.com/JakubPilkowski/uratuj-smartfona/commit/a273a34ed7e021ffdd3d9300081d4b414f8e7bd4))
+* implement cookie consent system with react-cookie-consent ([5cccf9e](https://github.com/JakubPilkowski/uratuj-smartfona/commit/5cccf9e7e62ae0356e1e0ebf90726834971985fb))
+* implement custom netlify build script ([b69097f](https://github.com/JakubPilkowski/uratuj-smartfona/commit/b69097ffb67a931cd43418c946712a99abe9184d))
+* replace react-cookie-consent with custom implementation ([0568bcc](https://github.com/JakubPilkowski/uratuj-smartfona/commit/0568bcc1c7885c7227da10c20f6c0de780251b09))
+* separate promotion dialog analytics events - v1.1.0 ([b38a2e7](https://github.com/JakubPilkowski/uratuj-smartfona/commit/b38a2e7161a9d4ce5f59be8be2ca9c59bfe27d7d))
+* update promotion dialog to offer free screen protection for Google reviews ([df8960e](https://github.com/JakubPilkowski/uratuj-smartfona/commit/df8960ea6512bd10cba27a37606d535db6c1de19))
+
 # [1.2.0](https://github.com/JakubPilkowski/uratuj-smartfona/compare/v1.1.0...v1.2.0) (2025-08-27)
 
 
