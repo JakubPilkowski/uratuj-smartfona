@@ -36,21 +36,27 @@ export const useGoogleAnalytics = () => {
     [trackEvent]
   );
 
-  const trackPromotionDialogAction = useCallback(
-    (action: "google_review_clicked" | "dialog_closed") => {
-      trackEvent("promotion_dialog_action", {
-        event_category: "engagement",
-        event_label: action,
-        value: 1,
-      });
-    },
-    [trackEvent]
-  );
+  const trackGoogleReviewScreenForOpinionClicked = useCallback(() => {
+    trackEvent("google_review_screen_for_opinion_clicked", {
+      event_category: "engagement",
+      event_label: "free_screen_protection_offer_for_review",
+      value: 1,
+    });
+  }, [trackEvent]);
+
+  const trackGoogleReviewScreenForOpinionClosed = useCallback(() => {
+    trackEvent("google_review_screen_for_opinion_closed", {
+      event_category: "engagement",
+      event_label: "free_screen_protection_offer_for_review",
+      value: 1,
+    });
+  }, [trackEvent]);
 
   return {
     isGtagAvailable,
     trackEvent,
     trackPromotionDialogDisplayed,
-    trackPromotionDialogAction,
+    trackGoogleReviewScreenForOpinionClicked,
+    trackGoogleReviewScreenForOpinionClosed,
   };
 };

@@ -10,15 +10,18 @@ export default function PromotionDialog() {
   const [isOpen, setIsOpen] = useState(false);
   const { hasUserInteracted, analyticsEnabled, timeToAccept } =
     useCookieConsent();
-  const { trackPromotionDialogDisplayed, trackPromotionDialogAction } =
-    useGoogleAnalytics();
+  const {
+    trackPromotionDialogDisplayed,
+    trackGoogleReviewScreenForOpinionClicked,
+    trackGoogleReviewScreenForOpinionClosed,
+  } = useGoogleAnalytics();
 
   useEffect(() => {
     // Only show dialog if user has interacted with cookie consent
     if (hasUserInteracted) {
       // Calculate delay based on time to accept cookies
-      // If timeToAccept is 0, assume 8 seconds
-      const delay = Math.max(2000, 8000 - timeToAccept * 1000);
+      // If timeToAccept is 0, assume 6 seconds
+      const delay = Math.max(2000, 6000 - timeToAccept * 1000);
 
       // Show dialog after calculated delay
       const timer = setTimeout(() => {
@@ -39,7 +42,7 @@ export default function PromotionDialog() {
 
   const handleReviewClick = () => {
     // Track review button click in Google Analytics
-    trackPromotionDialogAction("google_review_clicked");
+    trackGoogleReviewScreenForOpinionClicked();
 
     // Open Google review link in new tab
     window.open("https://g.page/r/CfJNLmdJ2OYeEBM/review", "_blank");
@@ -48,7 +51,7 @@ export default function PromotionDialog() {
 
   const handleClose = () => {
     // Track dialog close in Google Analytics
-    trackPromotionDialogAction("dialog_closed");
+    trackGoogleReviewScreenForOpinionClosed();
 
     setIsOpen(false);
   };
