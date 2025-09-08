@@ -9,7 +9,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "release": "semantic-release",
+    "release": "node -r dotenv/config node_modules/.bin/semantic-release --no-ci",
     "prepare": "husky",
     "pre-push": "npm run release"
   },
