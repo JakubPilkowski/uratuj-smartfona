@@ -9,9 +9,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "release": "node -r dotenv/config node_modules/.bin/semantic-release --no-ci",
-    "prepare": "husky",
-    "pre-push": "npm run release"
+    "release": "node -r dotenv/config node_modules/.bin/semantic-release --no-ci"
   },
   "author": "JP",
   "license": "ISC",
@@ -26,7 +24,6 @@
     "@types/react-dom": "^18.0.8",
     "eslint": "^8.27.0",
     "eslint-config-next": "^13.0.3",
-    "husky": "^9.1.7",
     "semantic-release": "^24.2.7",
     "typescript": "^4.8.4"
   },
@@ -34,6 +31,7 @@
     "@iconify-icon/react": "^3.0.0",
     "@radix-ui/react-dialog": "^1.1.15",
     "clsx": "^1.2.1",
+    "dotenv": "^17.2.2",
     "embla-carousel-auto-scroll": "^8.6.0",
     "embla-carousel-react": "^8.6.0",
     "framer-motion": "^11.18.2",
