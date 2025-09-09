@@ -26,6 +26,13 @@
 
 * releaserc config ([37ae212](https://github.com/JakubPilkowski/uratuj-smartfona/commit/37ae212bc0071d1ecdde19eb51ef36ebbbc948c9))
 
+## [1.2.2](https://github.com/JakubPilkowski/uratuj-smartfona/compare/v1.2.1...v1.2.2) (2025-09-09)
+
+
+### Bug Fixes
+
+* releaserc config ([37ae212](https://github.com/JakubPilkowski/uratuj-smartfona/commit/37ae212bc0071d1ecdde19eb51ef36ebbbc948c9))
+
 # [1.2.0](https://github.com/JakubPilkowski/uratuj-smartfona/compare/v1.1.0...v1.2.0) (2025-08-27)
 
 ### Bug Fixes
