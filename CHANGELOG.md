@@ -1,3 +1,16 @@
+# [1.3.0](https://github.com/JakubPilkowski/uratuj-smartfona/compare/v1.2.1...v1.3.0) (2025-12-14)
+
+
+### Bug Fixes
+
+* releaserc config ([37ae212](https://github.com/JakubPilkowski/uratuj-smartfona/commit/37ae212bc0071d1ecdde19eb51ef36ebbbc948c9))
+* workflow missing npm install script ([28411fa](https://github.com/JakubPilkowski/uratuj-smartfona/commit/28411fa458cc06c5efaf719a239af27b22809223))
+
+
+### Features
+
+* **release-github-actions:** add github actions configuration ([78ffa08](https://github.com/JakubPilkowski/uratuj-smartfona/commit/78ffa08625e59060f3b3635366f2c372792d0bd3))
+
 # [1.2.0](https://github.com/JakubPilkowski/uratuj-smartfona/compare/v1.1.0...v1.2.0) (2025-08-27)
 
 ### Bug Fixes
