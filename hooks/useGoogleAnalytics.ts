@@ -52,11 +52,23 @@ export const useGoogleAnalytics = () => {
     });
   }, [trackEvent]);
 
+  const trackChristmasDialogDisplayed = useCallback(
+    (timeToAccept: number) => {
+      trackEvent("christmas_dialog_displayed", {
+        event_category: "engagement",
+        event_label: "christmas_promotion",
+        value: timeToAccept,
+      });
+    },
+    [trackEvent]
+  );
+
   return {
     isGtagAvailable,
     trackEvent,
     trackPromotionDialogDisplayed,
     trackGoogleReviewScreenForOpinionClicked,
     trackGoogleReviewScreenForOpinionClosed,
+    trackChristmasDialogDisplayed,
   };
 };

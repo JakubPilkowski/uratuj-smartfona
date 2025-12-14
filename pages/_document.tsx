@@ -13,7 +13,7 @@ class MyDocument extends Document {
           />
           <meta
             name="keywords"
-            content="telefony, labubu, akcesoria, serwis, olsztyn, naprawa, centrum, centrum telefonii, smartphone, etui, case, telefon, promocja, wyprzedaż, rabat, uratuj, smartfon"
+            content="telefony, labubu, akcesoria, serwis, olsztyn, naprawa, centrum, centrum telefonii, smartphone, etui, case, telefon, promocja, wyprzedaż, rabat, uratuj, smartfon, święta, 3mk, folia na ekran, folia prywatyzująca, folia klarowna, folia matowa, ekran, wyświetlacz"
           />
           <meta name="author" content="Jakub Piłkowski" />
           <link rel="icon" type="image/png" href="uratuj_smartfona.ico" />

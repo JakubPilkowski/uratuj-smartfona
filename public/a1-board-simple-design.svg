@@ -39,22 +39,26 @@
   <rect x="205" y="200" width="6" height="26" rx="1" fill="hsl(190, 100%, 50%)"/>
   <text x="225" y="225" font-family="Arial, sans-serif" font-size="33" font-weight="bold" text-anchor="start" fill="hsl(0, 0%, 100%)">UJ SMARTFONA</text>
   
-  <!-- Services Section -->
-  <text x="60" y="300" font-family="Arial, sans-serif" font-size="30" font-weight="bold" text-anchor="start" fill="hsl(190, 100%, 50%)">• KOMPLEKSOWY SERWIS</text>
-  
   <!-- Rich Accessories Section -->
-  <text x="60" y="380" font-family="Arial, sans-serif" font-size="30" font-weight="bold" text-anchor="start" fill="hsl(190, 100%, 50%)">• BOGATY WYBÓR AKCESORIÓW</text>
+  <text x="60" y="300" font-family="Arial, sans-serif" font-size="30" font-weight="bold" text-anchor="start" fill="hsl(190, 100%, 50%)">•</text>
+  <text x="90" y="300" font-family="Arial, sans-serif" font-size="30" font-weight="bold" text-anchor="start" fill="hsl(0, 0%, 100%)">BOGATY WYBÓR AKCESORIÓW</text>
   
-  <!-- Phone Sales Section -->
-  <text x="60" y="460" font-family="Arial, sans-serif" font-size="30" font-weight="bold" text-anchor="start" fill="hsl(190, 100%, 50%)">• SPRZEDAŻ TELEFONÓW</text>
+  <!-- Services Section -->
+  <text x="60" y="380" font-family="Arial, sans-serif" font-size="30" font-weight="bold" text-anchor="start" fill="hsl(190, 100%, 50%)">•</text>
+  <text x="90" y="380" font-family="Arial, sans-serif" font-size="30" font-weight="bold" text-anchor="start" fill="hsl(0, 0%, 100%)">KOMPLEKSOWY SERWIS</text>
+  
+  <!-- Phone Sales Section - split into two lines -->
+  <text x="60" y="460" font-family="Arial, sans-serif" font-size="30" font-weight="bold" text-anchor="start" fill="hsl(190, 100%, 50%)">•</text>
+  <text x="90" y="460" font-family="Arial, sans-serif" font-size="30" font-weight="bold" text-anchor="start" fill="hsl(0, 0%, 100%)">SPRZEDAŻ SMARTFONÓW I</text>
+  <text x="90" y="500" font-family="Arial, sans-serif" font-size="30" font-weight="bold" text-anchor="start" fill="hsl(0, 0%, 100%)">TELEFONÓW DLA SENIORA</text>
   
   <!-- Promotion in rounded square with background -->
-  <rect x="100" y="520" width="394" height="80" rx="15" fill="hsl(0, 0%, 10%)" stroke="hsl(190, 100%, 50%)" stroke-width="2"/>
-  <text x="297" y="550" font-family="Arial, sans-serif" font-size="25" font-weight="bold" text-anchor="middle" fill="hsl(190, 100%, 50%)">PROMOCJA</text>
-  <text x="297" y="580" font-family="Arial, sans-serif" font-size="20" font-weight="normal" text-anchor="middle" fill="hsl(0, 0%, 100%)">Do każdej wymiany ekranu szkło gratis!</text>
+  <rect x="100" y="570" width="394" height="80" rx="15" fill="hsl(0, 0%, 10%)" stroke="hsl(190, 100%, 50%)" stroke-width="2"/>
+  <text x="297" y="600" font-family="Arial, sans-serif" font-size="25" font-weight="bold" text-anchor="middle" fill="hsl(190, 100%, 50%)">PROMOCJA</text>
+  <text x="297" y="630" font-family="Arial, sans-serif" font-size="20" font-weight="normal" text-anchor="middle" fill="hsl(0, 0%, 100%)">Do każdej wymiany ekranu szkło gratis!</text>
   
   <!-- Contact information -->
-  <text x="297" y="680" font-family="Arial, sans-serif" font-size="37" font-weight="bold" text-anchor="middle" fill="hsl(0, 0%, 100%)">604 436 345</text>
-  <text x="297" y="711" font-family="Arial, sans-serif" font-size="29" font-weight="normal" text-anchor="middle" fill="hsl(0, 0%, 100%)">www.uratuj-smartfona.pl</text>
-  <text x="297" y="742" font-family="Arial, sans-serif" font-size="20" font-weight="normal" text-anchor="middle" fill="hsl(0, 0%, 100%)">uratujswojegosmartfona@gmail.com</text>
+  <text x="297" y="730" font-family="Arial, sans-serif" font-size="37" font-weight="bold" text-anchor="middle" fill="hsl(0, 0%, 100%)">604 436 345</text>
+  <text x="297" y="761" font-family="Arial, sans-serif" font-size="29" font-weight="normal" text-anchor="middle" fill="hsl(0, 0%, 100%)">www.uratuj-smartfona.pl</text>
+  <text x="297" y="792" font-family="Arial, sans-serif" font-size="20" font-weight="normal" text-anchor="middle" fill="hsl(0, 0%, 100%)">uratujswojegosmartfona@gmail.com</text>
 </svg>

@@ -1,37 +1,27 @@
-// Commented out - replaced with ChristmasDialog
-/*
 import * as Dialog from "@radix-ui/react-dialog";
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 import { Icon } from "@iconify-icon/react";
 import { useCookieConsent } from "../../contexts/CookieConsentContext";
 import { useGoogleAnalytics } from "../../hooks/useGoogleAnalytics";
-import styles from "./PromotionDialog.module.css";
+import styles from "./ChristmasDialog.module.css";
 
-export default function PromotionDialog() {
+export default function ChristmasDialog() {
   const [isOpen, setIsOpen] = useState(false);
   const { hasUserInteracted, analyticsEnabled, timeToAccept } =
     useCookieConsent();
-  const {
-    trackPromotionDialogDisplayed,
-    trackGoogleReviewScreenForOpinionClicked,
-    trackGoogleReviewScreenForOpinionClosed,
-  } = useGoogleAnalytics();
+  const { trackChristmasDialogDisplayed } = useGoogleAnalytics();
 
   useEffect(() => {
     // Only show dialog if user has interacted with cookie consent
     if (hasUserInteracted) {
-      // Calculate delay based on time to accept cookies
-      // If timeToAccept is 0, assume 6 seconds
-      const delay = Math.max(2000, 6000 - timeToAccept * 1000);
-
-      // Show dialog after calculated delay
+      // Show dialog after 1 second
       const timer = setTimeout(() => {
         setIsOpen(true);
 
-        // Track promotion dialog display in Google Analytics
-        trackPromotionDialogDisplayed(timeToAccept);
-      }, delay);
+        // Track Christmas dialog display in Google Analytics
+        trackChristmasDialogDisplayed(timeToAccept);
+      }, 1000);
 
       return () => clearTimeout(timer);
     }
@@ -39,22 +29,10 @@ export default function PromotionDialog() {
     analyticsEnabled,
     hasUserInteracted,
     timeToAccept,
-    trackPromotionDialogDisplayed,
+    trackChristmasDialogDisplayed,
   ]);
 
-  const handleReviewClick = () => {
-    // Track review button click in Google Analytics
-    trackGoogleReviewScreenForOpinionClicked();
-
-    // Open Google review link in new tab
-    window.open("https://g.page/r/CfJNLmdJ2OYeEBM/review", "_blank");
-    setIsOpen(false);
-  };
-
   const handleClose = () => {
-    // Track dialog close in Google Analytics
-    trackGoogleReviewScreenForOpinionClosed();
-
     setIsOpen(false);
   };
 
@@ -71,6 +49,22 @@ export default function PromotionDialog() {
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.3 }}
               />
+              {/* Snow Effect */}
+              <div className={styles.snowContainer}>
+                {Array.from({ length: 30 }).map((_, i) => (
+                  <div
+                    key={i}
+                    className={styles.snowflake}
+                    style={{
+                      left: `${Math.random() * 100}%`,
+                      animationDelay: `${Math.random() * 3}s`,
+                      animationDuration: `${3 + Math.random() * 2}s`,
+                    }}
+                  >
+                    ❄
+                  </div>
+                ))}
+              </div>
             </Dialog.Overlay>
             <Dialog.Content>
               <motion.div
@@ -94,31 +88,22 @@ export default function PromotionDialog() {
 
                 <div className={styles.body}>
                   <Dialog.Title className={styles.title}>
-                    🎁 Darmowe Szkło Ochronne! 🎁
+                    Promocja świąteczna
                   </Dialog.Title>
 
                   <Dialog.Description className={styles.description}>
-                    Zostaw opinię w Google i otrzymaj szkło gratis!*
+                    Wszystkie folie marki 3mk od 49zł
                   </Dialog.Description>
 
                   <Dialog.Description className={styles.descriptionSecondary}>
-                    Pomóż innym klientom i otrzymaj darmowe szkło ochronne do
-                    swojego smartfona. Wystarczy, że zostawisz nam pozytywną
-                    opinię w Google!
+                    Skorzystaj z promocji świątecznej na folie ochronne marki
+                    3mk. Wybierz spośród folii prywatyzujących, klarownych i
+                    matowych. Profesjonalny montaż w naszym serwisie.
                   </Dialog.Description>
 
-                  <div className={styles.ctaContainer}>
-                    <button
-                      className={styles.ctaButton}
-                      onClick={handleReviewClick}
-                    >
-                      Zostaw opinię i odbierz szkło gratis
-                    </button>
-                  </div>
-                  <p className={styles.disclaimer}>
-                    * Darmowe szkło należy odebrać bezpośrednio w serwisie
-                    ukazując dowód wystawienia opinii
-                  </p>
+                  <button className={styles.ctaButton} onClick={handleClose}>
+                    Zapraszamy do salonu
+                  </button>
                 </div>
               </motion.div>
             </Dialog.Content>
@@ -127,10 +112,4 @@ export default function PromotionDialog() {
       </AnimatePresence>
     </Dialog.Root>
   );
-}
-*/
-
-// Placeholder export to prevent import errors
-export default function PromotionDialog() {
-  return null;
 }

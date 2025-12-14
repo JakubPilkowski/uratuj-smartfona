@@ -12,7 +12,8 @@ import FloatingMap from "../components/FloatingMap/FloatingMap";
 import FloatingWhatsApp from "../components/FloatingWhatsApp/FloatingWhatsApp";
 import FloatingFacebook from "../components/FloatingFacebook/FloatingFacebook";
 import FloatingInstagram from "../components/FloatingInstagram/FloatingInstagram";
-import PromotionDialog from "../components/PromotionDialog/PromotionDialog";
+// import PromotionDialog from "../components/PromotionDialog/PromotionDialog";
+import ChristmasDialog from "../components/ChristmasDialog/ChristmasDialog";
 
 const HomePage: React.FC = () => {
   return (
@@ -37,7 +38,8 @@ const HomePage: React.FC = () => {
       <FloatingWhatsApp />
       <FloatingFacebook />
       <FloatingInstagram />
-      <PromotionDialog />
+      {/* <PromotionDialog /> */}
+      <ChristmasDialog />
     </>
   );
 };
