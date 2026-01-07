@@ -1,3 +1,10 @@
+## [1.3.1](https://github.com/JakubPilkowski/uratuj-smartfona/compare/v1.3.0...v1.3.1) (2026-01-07)
+
+
+### Bug Fixes
+
+* update Node.js version to 22 in CI workflow ([a184ca8](https://github.com/JakubPilkowski/uratuj-smartfona/commit/a184ca852acfaee92c8e8dd0e4e2b01f8851171e))
+
 # [1.3.0](https://github.com/JakubPilkowski/uratuj-smartfona/compare/v1.2.1...v1.3.0) (2025-12-14)
 
 
