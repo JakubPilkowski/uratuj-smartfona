@@ -1,5 +1,3 @@
-// Commented out - replaced with ChristmasDialog
-/*
 import * as Dialog from "@radix-ui/react-dialog";
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
@@ -21,17 +19,13 @@ export default function PromotionDialog() {
   useEffect(() => {
     // Only show dialog if user has interacted with cookie consent
     if (hasUserInteracted) {
-      // Calculate delay based on time to accept cookies
-      // If timeToAccept is 0, assume 6 seconds
-      const delay = Math.max(2000, 6000 - timeToAccept * 1000);
-
-      // Show dialog after calculated delay
+      // Show dialog after 1 second (same timing as ChristmasDialog)
       const timer = setTimeout(() => {
         setIsOpen(true);
 
         // Track promotion dialog display in Google Analytics
         trackPromotionDialogDisplayed(timeToAccept);
-      }, delay);
+      }, 1000);
 
       return () => clearTimeout(timer);
     }
@@ -127,10 +121,4 @@ export default function PromotionDialog() {
       </AnimatePresence>
     </Dialog.Root>
   );
-}
-*/
-
-// Placeholder export to prevent import errors
-export default function PromotionDialog() {
-  return null;
 }

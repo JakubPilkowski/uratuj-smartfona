@@ -63,6 +63,25 @@ export const useGoogleAnalytics = () => {
     [trackEvent]
   );
 
+  const trackSpringDialogDisplayed = useCallback(
+    (timeToAccept: number) => {
+      trackEvent("spring_dialog_displayed", {
+        event_category: "engagement",
+        event_label: "spring_promotion",
+        value: timeToAccept,
+      });
+    },
+    [trackEvent]
+  );
+
+  const trackSpringDialogPhoneClicked = useCallback(() => {
+    trackEvent("spring_dialog_phone_clicked", {
+      event_category: "engagement",
+      event_label: "spring_promotion",
+      value: 1,
+    });
+  }, [trackEvent]);
+
   return {
     isGtagAvailable,
     trackEvent,
@@ -70,5 +89,7 @@ export const useGoogleAnalytics = () => {
     trackGoogleReviewScreenForOpinionClicked,
     trackGoogleReviewScreenForOpinionClosed,
     trackChristmasDialogDisplayed,
+    trackSpringDialogDisplayed,
+    trackSpringDialogPhoneClicked,
   };
 };
