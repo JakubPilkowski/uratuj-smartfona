@@ -154,40 +154,6 @@
 
 /* Christmas Effects */
 
-/* Snow Effect */
-.snowContainer {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  pointer-events: none;
-  overflow: hidden;
-  z-index: 10001;
-  backdrop-filter: none;
-}
-
-.snowflake {
-  position: absolute;
-  top: -10px;
-  font-size: 1rem;
-  color: #ffffff;
-  text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
-  animation: snowfall linear infinite;
-  user-select: none;
-}
-
-@keyframes snowfall {
-  0% {
-    transform: translateY(0) rotate(0deg);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(100vh) rotate(360deg);
-    opacity: 0.3;
-  }
-}
-
 /* Santa Hat Effect */
 .santaHat {
   display: inline-block;
@@ -306,10 +272,6 @@
 
   .effectToggleButton {
     padding: 0.625rem 1.25rem;
-    font-size: 0.8rem;
-  }
-
-  .snowflake {
     font-size: 0.8rem;
   }
 

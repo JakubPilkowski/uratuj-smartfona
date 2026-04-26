@@ -49,22 +49,6 @@ export default function ChristmasDialog() {
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.3 }}
               />
-              {/* Snow Effect */}
-              <div className={styles.snowContainer}>
-                {Array.from({ length: 30 }).map((_, i) => (
-                  <div
-                    key={i}
-                    className={styles.snowflake}
-                    style={{
-                      left: `${Math.random() * 100}%`,
-                      animationDelay: `${Math.random() * 3}s`,
-                      animationDuration: `${3 + Math.random() * 2}s`,
-                    }}
-                  >
-                    ❄
-                  </div>
-                ))}
-              </div>
             </Dialog.Overlay>
             <Dialog.Content>
               <motion.div
