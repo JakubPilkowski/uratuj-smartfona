@@ -52,10 +52,11 @@ const Hero: React.FC = () => {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 1.2 }}
-                href="tel:604-436-345"
-                className={`btn btn-primary ${styles.ctaButton}`}
+                href="tel:+48604436345"
+                className={`btn btn-primary ${styles.ctaButton} ${styles.ctaPhoneLink}`}
               >
-                Zadzwoń teraz
+                <span className={styles.ctaPhoneLinkText}>Zadzwoń teraz</span>
+                <span className={styles.ctaPhoneNumber}>+48 604-436-345</span>
               </motion.a>
 
               <motion.button

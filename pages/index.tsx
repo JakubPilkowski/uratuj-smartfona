@@ -21,7 +21,8 @@ const HomePage: React.FC = () => {
     <>
       <Head>
         <title>
-          Uratuj Smartfona - Profesjonalny serwis smartfonów w Olsztynie
+          Uratuj Smartfona - Profesjonalny serwis naprawy telefonów i smartfonów
+          w Olsztynie
         </title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>

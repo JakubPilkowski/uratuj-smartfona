@@ -89,6 +89,32 @@
   height: 20px;
 }
 
+.opinionLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: fit-content;
+  margin-top: 0.25rem;
+  padding: 0.75rem 1.25rem;
+  border-radius: 10px;
+  background-color: var(--color-accent);
+  color: var(--color-white);
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.opinionLink:hover {
+  background-color: var(--color-white);
+  color: var(--color-black);
+  transform: translateY(-2px);
+}
+
+.opinionLink svg {
+  flex-shrink: 0;
+}
+
 .mapContainer {
   color: var(--color-white);
 }

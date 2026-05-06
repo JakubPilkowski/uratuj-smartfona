@@ -109,6 +109,27 @@ const Footer: React.FC = () => {
                   </a>
                 </div>
               </div>
+
+              <div className={styles.contactItem}>
+                <h3 className={styles.contactTitle}>Opinia w Google</h3>
+                <a
+                  href="https://g.page/r/CfJNLmdJ2OYeEBM/review"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.opinionLink}
+                >
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    aria-hidden
+                  >
+                    <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                  </svg>
+                  Zostaw opinię w Google
+                </a>
+              </div>
             </div>
           </motion.div>
 

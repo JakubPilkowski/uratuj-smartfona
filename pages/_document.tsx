@@ -9,7 +9,7 @@ class MyDocument extends Document {
         <Head>
           <meta
             name="description"
-            content="Profesjonalny serwis smartfonów w Olsztynie. Naprawa ekranów, baterii, aparatów i innych uszkodzeń. Szybko, tanio, profesjonalnie."
+            content="Profesjonalny serwis naprawy telefonów i smartfonów w Olsztynie. Naprawa ekranów, baterii, aparatów i innych uszkodzeń. Szybko, tanio, profesjonalnie."
           />
           <meta
             name="keywords"
